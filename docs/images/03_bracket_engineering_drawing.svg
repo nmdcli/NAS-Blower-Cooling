@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 640" width="100%" height="100%" style="background:#1b1d23; font-family: sans-serif;">
+  <!-- 标题与标定 -->
+  <text x="35" y="40" fill="#ffffff" font-size="20" font-weight="bold">【视图三·终版】右侧正投影工程装配视图（从散热鳍片向左看）</text>
+  <text x="35" y="65" fill="#888a96" font-size="13">右侧为前(硬盘笼)，左侧为后 | 风扇出风口正对观察者(厚度10.8mm，出风口高40.9mm) | 主板厚度7.8mm</text>
+
+  <!-- 方位指示器 -->
+  <g transform="translate(680, 25)">
+    <rect width="200" height="50" rx="6" fill="#242730" stroke="#363a45" stroke-width="1"/>
+    <!-- 箭头指向前方 (右手边) -->
+    <path d="M 80 25 L 140 25" stroke="#60a5fa" stroke-width="2"/>
+    <path d="M 130 18 L 142 25 L 130 32" fill="#60a5fa"/>
+    <text x="15" y="30" fill="#cbd5e1" font-size="12">← 后(尾部)</text>
+    <text x="148" y="30" fill="#60a5fa" font-size="12" font-weight="bold">前(硬盘笼) →</text>
+  </g>
+
+  <!-- 主绘图区 -->
+  <g transform="translate(60, 95)">
+    <rect width="800" height="500" rx="8" fill="#242730" stroke="#363a45" stroke-width="1.5"/>
+
+    <!-- 顶部机箱梁基准线 (标明 H1 在右，H2 在左) -->
+    <line x1="40" y1="50" x2="760" y2="50" stroke="#64748b" stroke-width="2" stroke-dasharray="4"/>
+    <text x="45" y="42" fill="#94a3b8" font-size="12">机箱左梁接触顶面 (基准 Z=0)</text>
+
+    <!-- 底部机箱底板 -->
+    <rect x="40" y="450" width="720" height="12" fill="#d97706"/>
+    <text x="540" y="480" fill="#d97706" font-size="12" font-weight="bold">机箱金属底板 (触底支撑 Z=163mm)</text>
+
+    <!-- 1. 背景：主固定立板 (深蓝色，沿机箱前后延伸) -->
+    <!-- 板厚 7.8mm 贴合梁，总高 163mm 从顶梁到底板 -->
+    <rect x="140" y="50" width="540" height="400" rx="3" fill="#1e3a8a" fill-opacity="0.35" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="160" y="430" fill="#60a5fa" font-size="12">主固定立板 (前后长 91.1mm，板厚 7.8mm，高 163mm 垂直到底消除干涉)</text>
+
+    <!-- 螺栓孔：右手边是靠近硬盘笼的 H1，左手边是靠近机箱后的 H2 -->
+    <!-- H1 螺孔 (右) -->
+    <g transform="translate(560, 50)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#ef4444" stroke-width="2"/>
+      <circle cx="0" cy="15" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="1"/>
+      <text x="-15" y="35" fill="#ef4444" font-size="11" font-weight="bold">H1 (Φ2.2mm)</text>
+      <text x="-40" y="-8" fill="#ef4444" font-size="11">距前阻挡物 5.2mm</text>
+    </g>
+
+    <!-- H2 螺孔 (左) -->
+    <g transform="translate(260, 50)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#ef4444" stroke-width="2"/>
+      <circle cx="0" cy="15" r="4.5" fill="#ef4444" stroke="#ffffff" stroke-width="1"/>
+      <text x="-15" y="35" fill="#ef4444" font-size="11" font-weight="bold">H2 (Φ2.2mm)</text>
+    </g>
+
+    <!-- H1 与 H2 孔距 74.78mm 标注线 -->
+    <g stroke="#ef4444" stroke-width="1">
+      <line x1="260" y1="20" x2="560" y2="20"/>
+      <line x1="260" y1="12" x2="260" y2="28"/>
+      <line x1="560" y1="12" x2="560" y2="28"/>
+    </g>
+    <text x="365" y="15" fill="#ef4444" font-size="11" font-weight="bold">两孔中心距 74.78mm (M2.6 自攻螺栓)</text>
+
+    <!-- 2. 前景：从主板向观察者(向右)垂直伸出的风扇挂板及 5010 风扇出风侧面 -->
+    <g transform="translate(380, 0)">
+      <!-- 风扇外围支架卡框 (亮蓝色) -->
+      <rect x="0" y="70" width="30" height="245" rx="3" fill="#2563eb" fill-opacity="0.85" stroke="#93c5fd" stroke-width="1.5"/>
+
+      <!-- 风扇进风面方向指示 (右手边为风扇进风大平面) -->
+      <path d="M 45 190 L 25 190" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+      <text x="35" y="165" fill="#38bdf8" font-size="11">进风面 (50x50mm)</text>
+      <text x="35" y="180" fill="#38bdf8" font-size="11">正对右侧硬盘笼 →</text>
+
+      <!-- 上层 5010 风扇狭长侧面 (正对观察者，实测厚度 10.8mm) -->
+      <rect x="5" y="85" width="20" height="102" rx="2" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+      <!-- 上出风口 (高压气流垂直冲向屏幕吹出，高度 40.9mm) -->
+      <rect x="8" y="95" width="14" height="82" rx="1.5" fill="#22c55e" stroke="#86efac" stroke-width="1.5"/>
+      <circle cx="15" cy="136" r="3.5" fill="#22c55e"/>
+
+      <!-- 下层 5010 风扇狭长侧面 (厚度 10.8mm) -->
+      <rect x="5" y="195" width="20" height="102" rx="2" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+      <!-- 下出风口 -->
+      <rect x="8" y="205" width="14" height="82" rx="1.5" fill="#22c55e" stroke="#86efac" stroke-width="1.5"/>
+      <circle cx="15" cy="246" r="3.5" fill="#22c55e"/>
+
+      <text x="-50" y="140" fill="#86efac" font-size="11" font-weight="bold">上风口 ⊙</text>
+      <text x="-50" y="250" fill="#86efac" font-size="11" font-weight="bold">下风口 ⊙</text>
+      <text x="-105" y="280" fill="#22c55e" font-size="10">(出风口高40.9mm，直吹鳍片)</text>
+
+      <!-- 风扇侧面厚度 10.8mm 标注 -->
+      <g stroke="#cbd5e1" stroke-width="1">
+        <line x1="5" y1="315" x2="25" y2="315"/>
+        <line x1="5" y1="310" x2="5" y2="320"/>
+        <line x1="25" y1="310" x2="25" y2="320"/>
+      </g>
+      <text x="-25" y="335" fill="#cbd5e1" font-size="11" font-weight="bold">实测厚度 10.8mm</text>
+    </g>
+
+    <!-- 尺寸标注系统 -->
+    <!-- 总高 163mm -->
+    <g stroke="#94a3b8" stroke-width="1">
+      <line x1="100" y1="50" x2="100" y2="450"/>
+      <line x1="92" y1="50" x2="108" y2="50"/>
+      <line x1="92" y1="450" x2="108" y2="450"/>
+    </g>
+    <text x="30" y="255" fill="#cbd5e1" font-size="12" font-weight="bold">总高 163mm</text>
+
+    <!-- 风扇仓高度 104.5mm 标注线 -->
+    <g stroke="#94a3b8" stroke-width="1">
+      <line x1="435" y1="70" x2="435" y2="315"/>
+      <line x1="428" y1="70" x2="442" y2="70"/>
+      <line x1="428" y1="315" x2="442" y2="315"/>
+    </g>
+    <text x="445" y="195" fill="#cbd5e1" font-size="11" font-weight="bold">风扇仓高 104.5mm (净空增2.5mm)</text>
+
+    <!-- 底部避让净空约 58.5mm -->
+    <g stroke="#94a3b8" stroke-width="1">
+      <line x1="435" y1="325" x2="435" y2="450"/>
+      <line x1="428" y1="325" x2="442" y2="325"/>
+      <line x1="428" y1="450" x2="442" y2="450"/>
+    </g>
+    <text x="445" y="385" fill="#94a3b8" font-size="11">底部避空约 58.5mm (避开排风扇与线缆)</text>
+  </g>
+</svg>
