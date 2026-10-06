@@ -124,6 +124,20 @@ TANK 6 盘位机箱的前面板配备 6 个热插拔盘位。实测排查发现�
 
 ---
 
+### 图 4：风扇支架在实际机箱上的俯视概念图
+> 在机箱实拍照片的基础上展示未来会增加的风扇和风扇支架的位置。
+
+![Blower holder concept](docs/images/04_blower_holder_idea.png)
+
+---
+
+### 图 5：风扇支架的3D设计渲染图（最终版）
+> 展示设计的最终版风扇支架的外观。
+
+![Blower holder 3D Render](docs/images/05_blower_holder_3d_render.png)
+
+---
+
 ## 📐 最新 OpenSCAD 关键尺寸与公差参数表
 
 本项目所有源码均位于 `cad/nas_dual_5010_bracket.scad`。所有数据均历经游标卡尺测绘与实机 3D 打印迭代验证：
@@ -212,7 +226,9 @@ TANK 6 盘位机箱的前面板配备 6 个热插拔盘位。实测排查发现�
     └── images/
         ├── 01_chassis_layout_issue.png          # 原机箱空间与散热痛点示意图
         ├── 02_airflow_redesign.png              # 5、6 盘位进风与双涡轮风道原理图
-        └── 03_bracket_engineering_drawing.svg   # 终版支架尺寸正投影工程三视图
+        ├── 03_bracket_engineering_drawing.svg   # 终版支架尺寸正投影工程三视图
+        ├── 04_blower_holder_idea.png            # 在机箱实机照片上做的风扇支架概念图
+        └── 05_blower_holder_3d_render.png       # 风扇支架3D渲染图
 ```
 
 ---
